@@ -1,9 +1,75 @@
 .navbar {
-    display: flex;
-    position: sticky;
-    top: 0px;
+    display: flex;position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0,0);
+    width: 100vw;
+    z-index: 10000;
+    padding: 10px 73px;
     flex-direction: row;
-    justify-content: space-evenly;
     font-size: 2.5rem;
-    background-color: transparent;
+}
+
+.showBG {
+    background-color: black;
+}
+
+.menu-social-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+
+.menu-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 35px;
+}
+
+.menu-bar div {
+    font-size: 2rem;
+    font-weight: 300;
+    opacity: .9;
+    transition: all linear .2s;
+    position: relative;
+}
+
+.menu-bar div::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    border-radius: 4px;
+    transition: all linear .2s;
+    bottom: -5px;
+    background-color: rgba(74, 47, 189, 1);
+}
+.menu-bar div:hover {
+    cursor: pointer;
+}
+.menu-bar div:hover::before {
+    width: 100%;
+}
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.social-icons div {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border: 1px solid rgba(256,256,256,.8);
+    border-radius: 50%;
+}
+
+.lets-connect {
+    padding: 10px 20px;
+    font-size: 2rem;
+    color: rgba(256,256,256,.7);
+    border: 2px solid rgba(256,256,256, .7);
+    border-radius: 5px;
 }
